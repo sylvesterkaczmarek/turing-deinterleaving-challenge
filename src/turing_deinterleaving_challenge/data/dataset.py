@@ -45,11 +45,12 @@ class DeinterleavingChallengeDataset(Dataset):
         self.max_emitters = max_emitters
 
         # Set up dataset path
-        self.local_path = local_path or download_dataset(subsets=subset, **kwargs)
-        if not local_path:
+        if local_path is None:
             self._validate_subset(subset)
+            self.local_path = download_dataset(subsets=subset, **kwargs)
             self.subset = subset
         else:
+            self.local_path = local_path
             self.subset = "."
 
         # Load and analyze data files
