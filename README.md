@@ -189,7 +189,7 @@ from turing_deinterleaving_challenge import download_dataset
 save_dir = Path("../data")
 dataset_path = download_dataset(
     save_dir=save_dir,
-    subsets=["train", "validation", "test"],
+    subsets=["train", "val", "test"],
     modes=["stare", "scan"],
 )
 ```
