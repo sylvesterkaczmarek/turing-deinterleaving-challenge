@@ -5,7 +5,7 @@ from huggingface_hub import snapshot_download
 
 DATASET_ID = "alan-turing-institute/turing-synthetic-radar-dataset" 
 HF_TOKEN_VAR_NAME = "HUGGING_FACE_TOKEN"
-SUBSET_NAMES = ["train", "test", "validation"]
+SUBSET_NAMES = ["train", "test", "val"]
 MODE_NAMES = ["stare", "scan"] 
 
 def download_dataset(
